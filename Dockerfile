@@ -11,7 +11,7 @@ COPY kodiatech/src /tmp/src/
 
 # build for release
 # NOTE: "date-format-java-" must be replaced with the proper prefix
-RUN mvn -Dmaven.test.skip=true package && cp /target/kodiatech.jar kodiatech.jar
+RUN mvn -Dmaven.test.skip=true package && cp target/kodiatech.jar kodiatech.jar
 
 
 
