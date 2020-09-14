@@ -1,0 +1,21 @@
+version: '3'
+ 
+services:
+  db:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: kodiatechdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://192.168.99.100:5432/kodiatechdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234
+    depends_on:
+      - db
