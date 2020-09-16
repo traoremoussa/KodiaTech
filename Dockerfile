@@ -1,7 +1,7 @@
 # Build front
 FROM node:10.15.3-alpine as nodejs
 WORKDIR /app
-COPY ./src/main/front ./kodiatech-front
+COPY /kodiatech-front/ ./front
 RUN cd front \
     && npm install -g @angular/cli \
     && npm update \
