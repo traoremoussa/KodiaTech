@@ -20,7 +20,7 @@ COPY kodiatech/pom.xml /tmp/
 RUN mvn dependency:go-offline -B
      # copy your other files
 COPY kodiatech/src /tmp/src/
-COPY --from=nodejs /app/front/dist /tmp/src/main/resources/static
+COPY --from=nodejs /app/angular /tmp/src/main/resources/static
 # build for release
 # NOTE: "date-format-java-" must be replaced with the proper prefix
 RUN mvn -Dmaven.test.skip=true package && cp target/kodiatech.jar kodiatech.jar
