@@ -19,3 +19,12 @@ services:
       SPRING_DATASOURCE_PASSWORD: 1234
     depends_on:
       - db
+      
+  front:
+    build: 
+      context: kodiatech-front/
+      dockerfile: Dockerfile
+    ports:
+      - 4200:80
+    depends_on:
+      - app

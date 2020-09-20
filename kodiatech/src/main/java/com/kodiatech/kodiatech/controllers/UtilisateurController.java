@@ -19,26 +19,26 @@ import com.kodiatech.kodiatech.services.UtilisateurService;
 
 @RestController
 public class UtilisateurController {
-	
+
 	@Autowired
 	private UtilisateurService utilisateurService;
-	
+
 	@GetMapping("/")
 	public List<String> hello() {
 		return TypeEmploiEnum.listEmploi().map(x->x.getNom()).collect(Collectors.toList());//" I come so soon";
 	}
-	
-	
+
+
 	@GetMapping("/utilisateurs")
 	public ResponseEntity<List<Utilisateur>> getUtilisateurs(){
 		return new ResponseEntity<List<Utilisateur>>(utilisateurService.getUtilisateurs(), HttpStatus.OK);
 	}
 
-	
-	@PostMapping("")
+
+	@PostMapping("")// à faire
 	public ResponseEntity<Utilisateur> saveUtilisateurs(@Valid @RequestBody Utilisateur utilisateur){
 		Utilisateur util=utilisateurService.saveUtilisateur(utilisateur);
 		return new ResponseEntity<Utilisateur>(util,HttpStatus.CREATED);
 	}
-	
+
 }
