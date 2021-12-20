@@ -5,14 +5,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
+/** TODO
+les enume doiven extend un abstract class
+dans ce cas les liste d'enum seront labas , ..
+sauf si necessaire des methodes à implementer differenment 
+// va etre pour super(name)
+*/
 
 public enum TypeEmploiEnum {
 	/**
 	 * https://www.baeldung.com/java-enum-iteration
 	 */
 
-
+// va etre pour super(name)
 	STAGE("Stage"),
 	CDI("Temps plein"),
 	CDD ("Temps partiel") ;

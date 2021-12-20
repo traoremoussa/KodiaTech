@@ -1,5 +1,9 @@
 package com.kodiatech.kodiatech;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -13,9 +17,6 @@ import com.kodiatech.kodiatech.models.Utilisateur;
 import com.kodiatech.kodiatech.services.ExperienceService;
 import com.kodiatech.kodiatech.services.FormationService;
 import com.kodiatech.kodiatech.services.UtilisateurService;
-
-import javax.annotation.PostConstruct;
-import java.util.Date;
 
 @Component
 @Transactional
@@ -81,7 +82,7 @@ public class DataLoader implements ApplicationRunner {
 	 * @PostConstruct car y a run
 	 */
 	public void initFormations() {
-		f1 = new Formation( new Date(2020, 11, 01),new Date(2021,11,01),"Informatique","Informatique","Informatique big data","UPS",utilThom);
+		f1 = new Formation( parseDate("2020-12-30"), parseDate("2021-11-01"),"Informatique","Informatique","Informatique big data","UPS",utilThom);
 		formationService.saveFormation(f1);
 		
 
@@ -113,6 +114,13 @@ public class DataLoader implements ApplicationRunner {
 		
 
 	}
+	 public static Date parseDate(String date) {
+	        try {
+	            return new SimpleDateFormat("yyyy-MM-dd").parse(date);
+	        } catch (ParseException e) {
+	            return null;
+	        }
+	    }
 
 
 }
