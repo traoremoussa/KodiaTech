@@ -1,0 +1,67 @@
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+.navigation{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 4;
+  background-image: linear-gradient(180deg,rgb(17,17,17) 15% , transparent);
+
+}
+
+.menu{
+  display: flex
+  ;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+
+}
+
+.menu li{
+  padding: 20px;
+}
+
+/* à modifier*/
+.logo{
+  height: 33px;
+}
+
+.logo img{
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+
+}
+/*---------------------*/
+.menu li a{
+color: #ffffffcc;
+}
+
+.hire-me{
+  color: #46a0f5;
+}
+
+.hire-me i{
+  margin-left: 4px;
+}
+.menu li a:hover{
+color: #46a0f5;
+transition: all ease 0.5s;
+}
+
+.hire-me:hover{
+  color: #1a82e2;
+  transition: all ease 0.5s;
+  }

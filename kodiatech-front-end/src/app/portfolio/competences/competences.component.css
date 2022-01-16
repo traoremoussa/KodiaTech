@@ -1,0 +1,119 @@
+#skills {
+  width: 90%;
+  height: 100vh;
+}
+.skills-text-section {
+  width: 100%;
+
+}
+
+.skills-skill-section {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+
+}
+.skill-heading span {
+  color: #416cdf;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.s-box-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+
+/** espace entre les box*/
+justify-content: space-between;
+/*gap:5rem;*/
+}
+.skill-box {
+  display: flex;
+  margin: 25px 0px;
+}
+
+.s-box-icon {
+  margin-right: 12px;
+}
+.s-box-icon i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f011;
+  font-size: 1.1rem;
+}
+.skill-box strong {
+  color: #fff;
+  margin: 0px;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.skill-box p {
+  color: #8a94a783;
+  font-size: 0.9rem;
+}
+
+.fa-html5 {
+  color: #e06061;
+}
+.fa-css3-alt {
+  color: #5d85f3;
+}
+
+.fa-js {
+  color: #f9ca31;
+}
+
+.fa-java {
+  color: #457697;
+}
+
+.progress-line {
+  position: relative;
+  height: 5px;
+  width: 100%;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px,
+    1px rgba(255, 255, 255, 0.8);
+}
+.progress-line span{
+height: 100%;
+
+background: linear-gradient(90deg, #2788e2 20%, #3b43b8);
+position: absolute;
+border-radius: 10px;
+}
+.progress-line span::before {
+  position: absolute;
+  content: '';
+  right: 0px;
+  top: -10px;
+  height: 0px;
+  width: 0px;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: rgb(20, 98, 243);
+}
+.progress-line span::after {
+  position: absolute;
+  right: 0px;
+  top: -28px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: rgb(20, 98, 243);
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+.progress-line.html span::after {
+  content: '80%';
+}
+
