@@ -34,3 +34,7 @@ https://www.youtube.com/watch?v=ZFQkb26UD1Y
 https://www.youtube.com/watch?v=HxyUdlbh9e4
 ##
 https://www.youtube.com/watch?v=q6wzSkSnQTw
+
+##
+https://www.youtube.com/watch?v=IHQMOklyqXM&ab_channel=DarkCode
+https://stackoverflow.com/questions/53974704/binding-angular-component-variable-to-css-data-attributes
